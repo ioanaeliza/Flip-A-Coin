@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flip_a_Coin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wood" translatesAutoresizingMaskIntoConstraints="NO" id="lHB-OE-sP5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="575"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to continue" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bM-g8-Nub">
+                                <rect key="frame" x="54" y="80" width="213" height="132"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61U-Oz-1zC">
+                                <rect key="frame" x="7" y="207" width="307" height="218"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Aq9-do-wk1" appends="YES" id="Z2G-P0-eCX"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59763050079345703" green="0.29249584674835205" blue="0.26720190048217773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lHB-OE-sP5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2ee-qe-EhS"/>
+                            <constraint firstItem="61U-Oz-1zC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="5OX-f0-42f"/>
+                            <constraint firstItem="lHB-OE-sP5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AKF-S3-7jJ"/>
+                            <constraint firstItem="1bM-g8-Nub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="38" id="MRF-Nh-PTg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="lHB-OE-sP5" secondAttribute="bottom" constant="-7" id="MTV-XN-O0y"/>
+                            <constraint firstItem="1bM-g8-Nub" firstAttribute="centerX" secondItem="lHB-OE-sP5" secondAttribute="centerX" id="OrS-Z2-ela"/>
+                            <constraint firstItem="1bM-g8-Nub" firstAttribute="centerX" secondItem="61U-Oz-1zC" secondAttribute="centerX" id="YH8-JJ-Yni"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bM-g8-Nub" secondAttribute="trailing" constant="37" id="bMq-3u-phD"/>
+                            <constraint firstItem="1bM-g8-Nub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="bc4-sx-ZUP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="61U-Oz-1zC" secondAttribute="bottom" constant="143" id="fXk-Uz-wvc"/>
+                            <constraint firstItem="61U-Oz-1zC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-9" id="ik6-lK-t65"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1bM-g8-Nub" secondAttribute="bottom" constant="356" id="xc8-TL-l6H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinLabel" destination="1bM-g8-Nub" id="WSg-ho-Ef8"/>
+                        <outlet property="coinView" destination="61U-Oz-1zC" id="maL-M5-IeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Aq9-do-wk1">
+                    <connections>
+                        <action selector="pressCoin:" destination="BYZ-38-t0r" id="0v4-YX-qIx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="22.5" y="33.802816901408448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wood" width="1024" height="768"/>
+    </resources>
+</document>
